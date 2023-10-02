@@ -15,6 +15,8 @@
    <p id="p2">It's all anbout React</p>
   </div>
  */
+ import React from "react";
+ import ReactDOM from "react-dom/client";
 
   const root=ReactDOM.createRoot(document.getElementById("root"));
   const p1=React.createElement('p', {id:"p1"}, "React Tutorial");
