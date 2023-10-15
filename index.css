@@ -1,8 +1,53 @@
+html {
+    overflow-y: scroll;
+  }
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 4px 10 #ccc;
+    position: sticky;
+    top: 0;
+    transition: ease 3s;
+}
+header>nav{
+    margin: auto;
+}
+header>div{
+    /* only div element have assigned remaing whole space and other element would have space for content fit */
+    flex: 1; 
+    text-align: center;
+}
+header>div>input{
+    width: 250px;
+    height: 28px;
+}
+header>div>button{
+    height: 33px;
+    width: 100x;
+    margin-left: 4px;
+    outline: none;
+    cursor: pointer;
+}
+header>nav>ul{
+    list-style: none;
+    display: flex;
+}
+header>nav>ul>li{
+    margin: auto 4px;
+}
 .restourent-cards{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    
 }
 .restourent-card{
     max-width: 300;
