@@ -3,6 +3,9 @@ import React from 'react';
 class ClassTestChild extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+            user:{}
+        }
         console.log("Child constructor "+this.props.name);
     }
 
@@ -10,14 +13,16 @@ class ClassTestChild extends React.Component{
          console.log("Child componentDidMount "+this.props.name); // it doesn't wait for promise resoilved
         const data=await fetch('https://dummyjson.com/users/1');
         const jsonData=await data.json();
-        console.log("jsonData= ",jsonData);
-        console.log("Child componentDidMount "+this.props.name); // it wait for promise to resoilve it can execute
+        // this.setState(jsonData); 
     }
 
     render(){
         console.log("child render "+this.props.name)
-        return(
+          return (
+             <>
             <h2>Child class component</h2>
+            <h4>Name= {this.state.firstName}</h4>
+            </>
         )
     }
 }

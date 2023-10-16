@@ -36,7 +36,9 @@ class ClassTest extends React.Component{
  * Child render 1st
  * Parent componentDidMount
  * child componentDidMount <- because of async
- * child render 1st <- again
+ * child render 1st <- again (if setState called because it call update cycle)
+ * 
+ * https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
  */
 
 export default ClassTest;
