@@ -1,4 +1,5 @@
 import React from 'react';
+import ClassTestChild from './ClassTestChild';
 
 class ClassTest extends React.Component{
     // render is mandatory method of class
@@ -11,15 +12,15 @@ class ClassTest extends React.Component{
     */
    constructor(props){
      super(props)
-     console.log("constructor");
+     console.log("parent constructor");
    }
 
    componentDidMount(){
-    console.log("componentDidMount");
+    console.log("parent componentDidMount");
    }
 
     render(){
-        console.log(this);
+        console.log("Parent render");
         return (
             <div>
             <h1>Class Component called here</h1>
@@ -30,9 +31,23 @@ class ClassTest extends React.Component{
                     return {age:prevState.age+2}
                 }
             })}>AgeBtn</button>
+            <ClassTestChild name={"1st"}/>
+            <ClassTestChild name={"2nd"}/>
             </div>
+
         );
     }
 }
+/**
+ * parent constructor
+ * parent render
+ *  Child constructor 1st
+ *  child render 1st
+ *  child constructor 2nd
+ *  child render 2nd
+ *  child componentDidMount 1st
+ *  child componentDidMount 2nd
+ * Parent componentDidMount 2nd
+ */
 
 export default ClassTest;
