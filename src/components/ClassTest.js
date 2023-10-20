@@ -11,6 +11,10 @@ class ClassTest extends React.Component{
     console.log("parent componentDidMount");
    }
 
+   componentDidUpdate(){
+    console.log("parent componentDidUpdate");
+   }
+
     render(){
         console.log("Parent render");
         return (
@@ -30,15 +34,7 @@ class ClassTest extends React.Component{
     }
 }
 /**
- * Parent constructor
- * Parent render
- * Child constructor 1st
- * Child render 1st
- * Parent componentDidMount
- * child componentDidMount <- because of async
- * child render 1st <- again (if setState called because it call update cycle)
- * 
- * https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
+ *
  */
 
 export default ClassTest;
