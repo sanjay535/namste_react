@@ -31,16 +31,6 @@ class ClassTestChild extends React.Component{
     }
 }
 
-/**
 
-"SEPRATE"
- When update happen in parent Component
-'SEPRATE'
-
- Parent render
- child render 1st
- Child componentDidUpdate 1st
- parent componentDidUpdate
- */
 
 export default ClassTestChild;

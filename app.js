@@ -35,7 +35,7 @@ const appRouter=createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<ClassComponent name={"Sanjay"} age="23"/>
+        element:<Body/>
       },
       {
         path:'/xyz',

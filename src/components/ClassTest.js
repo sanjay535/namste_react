@@ -1,5 +1,6 @@
 import React from 'react';
 import ClassTestChild from './ClassTestChild';
+import TeaSet from './Effect';
 
 class ClassTest extends React.Component{
    constructor(props){
@@ -28,6 +29,7 @@ class ClassTest extends React.Component{
                 }
             })}>AgeBtn</button>
             <ClassTestChild name={"1st"}/>
+            <TeaSet/>
             </div>
 
         );
