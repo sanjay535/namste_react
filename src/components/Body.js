@@ -7,7 +7,7 @@ const Body=()=>{
   const {sections}=data;
   
    return (<>
-      <div className='restourent-cards'>
+      <div className='flex flex-wrap justify-center'>
       {sections.SECTION_SEARCH_RESULT.map(result=>(
         <RestourentCard {...result?.info} key={result?.info?.resId}/>
       ))}
