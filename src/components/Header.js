@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import logo from '../../assets/food_logo.jpg';
+import Theme from './Theme';
 
 const Header = () => {
   return (
@@ -8,6 +9,9 @@ const Header = () => {
       <div className='flex-1 text-center'>
         <input className='p-2 mr-2 w-72 outline-none border-2 rounded-md' placeholder='Search restourents..' type='text' />
         <button className='px-3 py-2 bg-green-100 rounded-md'>Search</button>
+      </div>
+      <div>
+        <Theme/>
       </div>
       <nav>
         <ul className='flex'>
